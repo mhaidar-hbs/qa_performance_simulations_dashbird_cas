@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.4" jmeter="5.4.2">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="RECORD 12-16-19 2.20.31 PM" enabled="true">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.3.1.23. Please contact support@blazemeter.com for further support.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Not A(Brand&quot;;v=&quot;99&quot;, &quot;Google Chrome&quot;;v=&quot;121&quot;, &quot;Chromium&quot;;v=&quot;121&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">dashbird-cee.hbssims-dev.org</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">cas.hbsstg.org</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">lifeconnect-cee.hbssims-dev.org</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+        <boolProp name="HTTPSampler.image_parser">true</boolProp>
+        <intProp name="HTTPSampler.concurrentPool">6</intProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager">
+        <collectionProp name="AuthManager.auth_list"/>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <longProp name="ThreadGroup.duration">0</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testname="Test" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://dashbird-cee.hbssims-dev.org/api/hbs/sim/lifeconnectloadtest" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/hbs/sim/lifeconnectloadtest</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>0.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">0</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 0 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://cas.hbsstg.org/cas/login?service=https%3A%2F%2Fcas.hbsstg.org%2Fcas%2Foauth2.0%2FcallbackAuthorize%3Fclient_id%3Ddashbird-cee.hbssims-dev.org%26redirect_uri%3Dhttps%253A%252F%252Fdashbird-cee.hbssims-dev.org%252Fapi%252Fcas%252Foauth%252Fcallback%253Fsim%253Dlifeconnectloadtest%26response_type%3Dcode%26client_name%3DCasOAuthClient" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="service" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">service</stringProp>
+                  <stringProp name="Argument.value">https://cas.hbsstg.org/cas/oauth2.0/callbackAuthorize?client_id=dashbird-cee.hbssims-dev.org&amp;redirect_uri=https%3A%2F%2Fdashbird-cee.hbssims-dev.org%2Fapi%2Fcas%2Foauth%2Fcallback%3Fsim%3Dlifeconnectloadtest&amp;response_type=code&amp;client_name=CasOAuthClient</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="execution" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">execution</stringProp>
+                  <stringProp name="Argument.value">420f4b8f-5b0d-4d4d-aa55-a523e8b514a9_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LnR3UHRHSnU2dGcwdUE3WHZDVzZMR2VMZXhoNFJjSlhpc0czRWlhaEx5WEp4REpnLUJWSi15OG9qZTZBS3llRDZJS003VUY5VXJSS3RJRTJUTmxDaURfb3FfMUJLRmdOLVB1S2t6QWhNRzI3RUlnUE1WMURkOGZiNGhpNU5kanZ5aE9HdTlKajZNYUI4Y1JxT2xDZ0NobVBFYUhvZ2oyVTY0NlVDQzBjNGxwel9tbjMxR3hONlpwUmlqWVQtNE9GV3k0VkF1NzNFRklMT3lVSnJ3TVA3Y3ltUnRUOHpUQU9YODVtXzg5QzdRcS1ZSmJXYnBzSDI5eUNwNndQRm5vRk5jSFJKdTBfN1dFM1pZRVVXSHF2RGxMVDk5NzdHYlNibUJ2NmI4YWFiQU53LUV5dGRhdmpha3VDSU44ZllPY1R6dmZ5SThTeDN4SXNhTjdyQjF2cDNrRmprSjdkTEg3R3llWGZUT2VmVWV0aWRLb1FpWkhFbFhMTmxaWHFURXpDc01iUHhsVzlweXE5bXpaTWZSMU1pUnY0NUZxUGhmQVZ2S3FUQVdJamVXbnpFZTNCV2ZaalRVeE5kZTRaNEphZlU4bEhtQUhNNmVPa253NGJ5SzZKaWJBa0lHWEMzbDBqNTByMVU0YW9vbmhmbHBsQlRnTkUzMlZ0c0lwNGg0b3JkcG9hUzR0d2VVOGtQMVpkQ2dsSXlPakRJbHM1aDNsRkpUR084eFBfVkxlUF85VnRGZmY2VTR4aEJLbHFobjB6aUlIZjR6aVozNHR5QWh5WkNtajRBeWpwazBCT2tta29ua19zVzJ3VThNOFhHdkRKQklaOEl3OGllWkRyLXVjLUJKSEhLUnlwNjNGV290UVlLZ3ZyWUxqNXBKZ1pYLXRPdkVOWXNtZ2lwVGQydU9iRUphWUtVOTVXRU01ejlOS21HTnhjU2Z3cU4tY1Y4c0VsOE9YY1ZLUm1xcEptVEpqNXNQMDJDRWs3SHZjSDJaQklGUG16NEZWeTB1cmtLUmlialBYejVCYmowNGJBUVJOcjlYWmh2Y2h6NXBvYTBndHVlamZ5cHl5VXAzeUZBb1FWR19TOXBLQnJGQjJtUm40TWM1d2V6NEVlV1VmU28tSF9zUlg1M2tqeDM0T2xSMHpYU29KdmRBVzhqSzdrZWk5R1BnODgyekw0eFltM1QtT0doOFZPU1RtVUxxTHJnTzB4aHFYRWtfSmJlVnlTTzJVQmpEQm9BQjlkWWxxcHRXdXZobEhGUHFHcml5Q01sTlhXN0JyanhQZng3YjZvZ214RE5TZTVBcjFOaG9ROXFaLThfVmlKUUE4aXpxQ0NpTVFyeWJxX0VfaUtoWW1XRV92VkwtRU9jeWE4d1NRc0pjQ2dnVG9UU3VFZWJOSFRPWFIxVS1sb0Q0ci1WZDBoY2hvSkpWQ1dDVkRyZG14SkhIR3ZKU1prRjRITDJVS0ViN3hlbDRWZmZfWkd2NmxZdVlUTDFtbk1ZX29aY3Bza2RGVWszdUhKLVI2d2VPcjl1RlhDRHQwYk5rTjJSb2tnVl9MQWYzeGdrcGNqbGxxS211d0FiUnBMYXJIZ3EydDNPYjlHRU1qVFpsLU9KVmZrZU1PdDNOM2dTRTBVOFNFTUN2a3NQbW9pUVVTd3J0bjZoSUo1OWJ1Y0QwN05LY193eEE4TGZmcmd0TU9ienRjYlBLMWxubEk2UXFEZDhNb0Nvb2VBSTFmb2xlX0szbU1fZFV5Z05xVHFIQTVGNDJKN3FfcEp1Q05sdzRGR1JEclE0TUxyMUFMTGh4azhwVVB4b1cwN3U1b2RsXzdKbVR3ekI1OV9TdGZPWlBmM2V1Z3VTRE5jV0xJaE5HczNyczNjaHl1WVUtUDZEV3ZiVFZJTDBxRjBfdGo4ZXZTbTdwZ2RpSVJ0S2cwdk5LUmx6U255MUMtZnp3SGt6ekFwY3VMeHN6MEtud3JURDBkbEZGTlEzQnVYcnhrTTZ4T3pOVXZxOUw2RVhFQ25CVGtYal9nMTNhS2xMSUJ4UXhJb3NyLVpYdTBfanBsSmU5TXpKRlZCbF9RYXJHMWFiY21HdDdrTjVXaXJaR0tqcUxEbVZhWFhzUk1fYUF0elpTdVZEUk9IR1EwLURuT1l1WWUxOXVZMTZmZkx6dFRIVXpzSTJsMUFZa2NwOVhLTHpGbml1cl9SOGZ6N1NMMXJfUzhLb0lhX3VFVjVqcjBCMllKSkdnbFJLWG8xQzE1Sl9lbTExZmVtcU9GUkVnV0ltcEMxMjI3ZzdlX0FXQkZaalhTdExkUXpOYWRGNHh4d3NFRWNuaVoxdVk2dS1TS2k5NE5MZXlBclVjOFYwLVRqd2xlbGtmU0lHd1RnRmZjUzNIV2JOdUpQTHdVLUxPOG9vZkpMdzZTR2NYWW1RM2FhcnUwSEdkWTlqOGlaemVVc1NDRmdnaXpMZk9mZVU1b0dubzRNVkRXVUt5LUZYTkNDeFpwQUxQSzcwcndSTHpIYkJWVG5GRXFIUkRySVJmRGstYk9zbmZvMGtiVWhDYUx4NTU4RVp6R1daNDREMGtyazNudkI5S2hPeVFFNXhzNllqNmkwUW9pSlFNbmY2UTV4WjFFZ2ZjeDE4VV9GUHlHSDNiSkxmelhnYnhRSEoyS3ZXbERzTkZZMFVHR3dqa3Z4YW9KZFg2OVhqSWVOMjZSbmYxTnMzaThzdWY1TUJLcXV6bTRLRDZIa3pfWVEtWU9wa19HTzFSdmRia0p1bjhCbnpiTFIyUHkwU19MMWdfbGdaaGJjcVZSZ1B4UTJ2cDNlLUFNZXNrRzJBZ1pCWWZ1NDJ0Y0ZnS3RwODZiWGIza3YxRzBPQlVDTzVJUms2Z1JiQ0NnQUE1T2FfN1V5VldDVUwwZEEyRTdnZThSSEJ2MHB4WVFtZmw4bk5VMFJleGotZExZc1NyN0NzTHBPMUFhMXNrcTJCemtvcEthUTIxOEpqZ20xdGVKMHpOYl9iNmRuSGxYR3VoTUZ6WDFjZjB6MTI2N0M1anhIZy1CWVNsRW5Mam95VTNVZHNIZnpRZWxUV0NBMnhCd2MzTnNYbW04cXVfRElSZnBHNnhmLWpvRHhhQ3hBZUl1YWZZQmdIaDhUS3RST2ZpbEZrY09yV2tDTU12TWZkYlh6ZWNMX0NVdWU1MVB2NVZGTVZVN2V1Q1JpeFZwNXhua1NfbklfaFlwZkZhMEZENEFFOU1VbWo0cENNYlBmeXc2cGVnYlh1RVV1aHh5bmxjTzBlWmZmdFhVX2ZfR1pScFNycWF2LTNNMVk3UUxHVHZkVFFINnRWbDhVUTc0emxtVDNRZDRuaVczWDUyUGlhNGxhNmVIYWZvM1JlOFVxdnZkbzZXMW1ZZUpQandyMkl3aXJEU09kQWNzYmp6TmR6NWI5VGZ3aUZIMGxfWk5IYjdwQ1BaTXVidG84ZnlCNVg4MXQ4ODlSN0EzYS1kcUY3VFl2bVVtSkVoZXV1bENSdWpiVWh3WXdZbktxSWEzX19zeGgwajhXelpsT1BLdzc4anVhdjJOLTZYNFNYUVR5UmdZckZnLWdOaklkY0NBS2pza3BlQXNRaFNHTUhNMzZieXVCcERZRno0RFFfd1E2WDBVejdSRGswOW9KU0dpaGtnb3hKeExCakdVWllUYjdOeF8xXzhQNVh2VmlmbjNBY3JBazFybzRTdVdnb0hWc1RIYlFtbVdvYTRWU0xHZl9DVVIxTU05bEZVSlhsS2NhLTU3VHhfYlFRMmNTTUt4cWxmY3daaEtRSlk2R2lvNHB5ODRJeWlGZElWZkk4bkZ6Wi1mQXU2dlFrWk1MSnI0RmlldlVhQWs0ZFJYM0MyVExFYUFlN3BRZ2s4MlhvTDJEb3JINEFQZE1oOWFTWUQ5RTl4SU5iTnA1bGpnSERpNmFUdTNOenRaNUtuYVhBdU5hZnNHWHhxUVV3STVZUHhmTV80SlRsbF9mZFktamE5bWgweWRlODBqSFNkbjhWbHZOTW1KVDZjcUczN2FQcnI3bzdHdThjLUY1Ylh6RmFCVkd1YjY4RGVUQ0NDd0ZHb29XdmQzNGV0Z3hXYUJBR3Z6dGtnV2tzRUF2cWYzbE9mUHhaNC1jQkQzT24tMEh0VFFTc3RPdU1meTdpbTRnOHc4NHJJQXZSOEsxX3dJRTM1VVhRa3A4MUZ1by00UjRyV2hUejhrdEUxeDBKNVdzU2hIbXoyNERPTWVxRU81RmJsU2NaQk5rT01Ld0ZndXZ3TE15UXhXbXhiTEU0YXpOVGZWOTlrOUdvOERoSWZCbEJBSUQ3ZHZEalNJeDdDakJib050ZzBsV040aVNrdE11Rnh2NVQ3bjYyek9mcndsSVdKMm5EdXFHemF6aDhTeHpFMTk1UW80Ymc0S3ljbXBnekJOdjQ1cXRSNUsyMk04amZSS3hhTDg4b2FrdjJIcFh3aE5RNGgzeVhpWHNyNWZuS0Y0LVNRai1jakNNbWNfTWJEbFA3S2FwZ3FfVDNJS3ZHWmVYYW5ZdkExTmd1dDNtck1kVW9vaUI2SldHS0RDUXhfRTBhdlpYSnN3VmpEMXZ6Z0x2Nk5zOUx4ZklzaW5JRjNzNU1VUVlYY0Nvc1ZxQUVQTV9iSHBZNHlDckcteWV5bGlaVTZaNFdEU2RIaC1Fc0NFQVpWVjNRcG96c09pT2MxRW82ZjVPaEloWEpMNkhSTTdCX3pmbHJhQ1JQZlc0SUQ3aVR1cG9jZ0lYbHVveWtjejFYVXRCR21oWms1aXZ0MnRZdU9IU0tHOWRvQUN3YmZQU0hocjVzX2p3cjlCei1iWF9jUXFRamV0QUlrVHpxY3UzTlNISEVLQjRJVHV5a0ZPLUUtdlRkZVE1SnBiNUhFaUFMWGlQTmg4LUQ0RklJTnEzQ2RIcW5YUjc3bHBGdVVRRG13dTA2Z2h5S3VWU2x1V240MlA3ajhOcFdNMWF6cG9tZzVUZXhiV1ZHLVh6aTZDNDY5aENsczNEV0hPTEs2QzNOYWpVdnZ5Rl8tOFZDcHFqaHpEVkdwb0xzV2JZLTFpbDBIb3FLVWV2RVhZcGZJTC0tTDVJRWs0XzhJdFdyQ3dXREpXTnkzcWgtV0hQSm01OW9oSEdVVkE3aVFrMzhWZ3liX1BoNVk0cG54WTMzV2VRZ0VIb2NtTzY2VnFpRHFYT2sxNzU4dVF3ejQzUjlJd2dYcXN4cE16OWhCaWh1eEI2djc5Y1p6dDQ0cEVfZ05tUjFPTnI1RW9NME5nZFBMcGNxRkFDeEdmSWJWbDBhS3Q2d253eWZYaF9RVks2aVZyeDJKcTdmNDV3TjhRaHN0b0ZyZlktLU02VmQ2RmtReG9WcllQMnlSYXVORlJybTlBV0Rfc0dreVNHTVdfX1VsUncyOUpFTTA3LVlZRXFGZDRXZ0FOMGF4Ynl1bjZXY2NsVjJCeFExMlgtVmF3dVFtQzdsVkxWcnJ4R3JuVU1lVkd4MC1Gc0E2ckY4TklfNUw2aG5fall6UHFRSDc0Sk5rOTNSb3FuZFYyYnVKRWF3dG1EVUMwbzlrYmtRdTlka1pjUGRULS1oR0gtaHJiOEFMRlRvYU1qTTdrYUR6cXNydTdLMFg1RjF6TlBfX0tieS1lSEpZRUxoeFR0X3pSSXdLeUd2RE1CQm5BWkJzMXdJNWdmQnBNLUhJLTZpNUVTNGp0cDJNeXAxYzhyMzYwMDhiaUdNczFrU1dLNHhISkRSTGEtc3RmcTJSLUJRUjNpMFZEemRMQ1R4d29VWWk3SVFUcFFSdmpxbzdTTnBwVGxiRVhSdXBpOXEyLWRRV3BaWnJwV3Jxb1lRR2thMGRKRUlELWthNW16VlltM3BTSFZSMjRkZEFQc0lWS2MxenJUVC12bXo1MVQ4WVUzUm11UERMaXNmOWhfZ09TZFdHam43a3J2N3pxeWVtdGZsdUx3b2liTUZJQVVoT1E4MEZ1TXA2UllmQXRHUXVpVXM2VndzNmtBTGJ2VE5rbFBqYzNVWU1KNnNnT19BY2Z2Uzd3Q0x6aF9KdmhVa0hWbjd2QnAtaUs4NGE0eGQxdGVxblE5YTZVUGgzSjAyTTVma2UtWWtlYlUtM1IxeHVXMEdSTDlNR1JNT3YtQWs4clQtUkRVY3h6bkdHVjl4NUVNVW05eEJKSUtRdzRNU1I3UTJrQ2dNRnViVmcxcFNjRWxKbFhPVU42cUlySk9zSkFLaHliamdHUE9OYlhQaC11eVJVdnZXcWNIelhRZUlvVG1ZYmhRVDJRLnBfR2NXdWZoMTdMTXkwSlFHaUxmaXl4RmZVbnhDbjZNQ0s2UDdXVFF1SHFwN1hPaGFENzNMb0NqcjBNNmpRd25JaVJ4X0YtMU9MQWhjVi1kUDdhSURB</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">ioP2u4O?#</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="_eventId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">_eventId</stringProp>
+                  <stringProp name="Argument.value">submit</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="geolocation" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">geolocation</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">pagrawal@mba2025stg.hbsstg.org</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">cas/login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[2]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
+              <doubleProp>
+                <name>RandomTimer.range</name>
+                <value>13242.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+              <stringProp name="ConstantTimer.delay">6621</stringProp>
+              <stringProp name="TestPlan.comments">Recorded time was 13242 milliseconds</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://lifeconnect-cee.hbssims-dev.org/api/dbd/login?t=5e1a1c0f5103ea162244c6e4659093c20a88c9bb860cd4c26c2a12d49f45ee734fcc0c0b32492293fe8c10671d02051297a8497cb7b14dec796b292fae8715d2e09fbf6710bbdab620aa81e78775428e23811bf3fe4c695deeb7ee4ca3e2245aa17a252ae431ef02edb19a1aeb336b2228f0d7be1fbcd56f5cb6875c4fd4bcf838410dbae759d285bb30ffb595fc25cb6d215ca299deaa3f7a9603eb6e780c42c2a466fbdd8fb8beac4229cee43af36ffcadad94c8235d0f87e4479417401563f63215bd83d4803bd0ef5f2100a2c635e3c3c10a4aa9f11c5c42c06d346bf4a5" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/dbd/login?t=5e1a1c0f5103ea162244c6e4659093c20a88c9bb860cd4c26c2a12d49f45ee734fcc0c0b32492293fe8c10671d02051297a8497cb7b14dec796b292fae8715d2e09fbf6710bbdab620aa81e78775428e23811bf3fe4c695deeb7ee4ca3e2245aa17a252ae431ef02edb19a1aeb336b2228f0d7be1fbcd56f5cb6875c4fd4bcf838410dbae759d285bb30ffb595fc25cb6d215ca299deaa3f7a9603eb6e780c42c2a466fbdd8fb8beac4229cee43af36ffcadad94c8235d0f87e4479417401563f63215bd83d4803bd0ef5f2100a2c635e3c3c10a4aa9f11c5c42c06d346bf4a5</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[3]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://lifeconnect-cee.hbssims-dev.org/api/learner/userCohortsAndProfiles" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/learner/userCohortsAndProfiles</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[4]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://lifeconnect-cee.hbssims-dev.org/api/learner/globalDetails" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/learner/globalDetails</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[5]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://lifeconnect-cee.hbssims-dev.org/api/learner/userProfilesAllCohorts" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <intProp name="HTTPSampler.port">0</intProp>
+            <stringProp name="HTTPSampler.path">api/learner/userProfilesAllCohorts</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <elementProp name="HTTPSampler.header_manager" elementType="HeaderManager" guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/plain, */*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp reference="../../../HTTPSamplerProxy[6]/elementProp[2]/collectionProp"/>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
